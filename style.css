@@ -1,0 +1,80 @@
+nav{
+    position: relative;
+    width:100%;
+}
+nav h1{
+    position:;
+    top:0;
+    padding-top:1%;
+    padding-left:3%;
+}
+#yes-menu{
+    position: absolute;
+    right:20px;
+    top:20px;
+    display: none;
+} 
+#no-menu{
+    position: absolute;
+    right:20px;
+    top:20px;
+    display: none;
+} 
+#sort-menu{
+    display: none;
+}
+nav ul{
+    float: right;
+    position: relative;
+    right:60px;
+    top:-20px;
+}
+nav ul li{
+    display: inline;
+    margin: 5px 10px;
+    padding:5px 5px;
+    color:#333;
+    font-weight: 600;
+    font-size: large;
+    transition: .5s;
+}
+nav ul li:hover{
+    border-bottom: 2px solid red;
+}
+
+@media only screen and (max-width:992px){
+    nav ul{
+        text-align: center;
+        position:absolute;
+        left: 0;
+        top:-600px;
+        transition:.5s;
+        background-color: #ff6347b4;
+        width:100%;
+        padding: 20px;
+    }
+    nav ul li{
+        display: block;
+        border-bottom: 2px solid gray;
+        border-radius: 0;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    nav #yes-menu{
+        display: block;
+    }
+    #sort-menu:checked ~ ul{
+        display: inline block;
+        position: fixed;
+        left:0px;
+        top:50px;
+    }
+    #sort-menu:checked ~ label #yes-menu{
+        display: none;
+    }
+    #sort-menu:checked ~ label #no-menu{
+        display: block;
+    }
+
+}
+
